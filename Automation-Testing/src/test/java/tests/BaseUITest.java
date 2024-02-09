@@ -1,9 +1,10 @@
-package tests.utils;
+package tests;
 
 import org.bouncycastle.oer.its.etsi102941.Url;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import tests.utils.SeleniumUtils;
 
 import java.io.IOException;
 import java.util.Properties;

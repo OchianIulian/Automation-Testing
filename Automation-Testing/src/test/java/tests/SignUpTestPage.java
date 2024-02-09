@@ -1,11 +1,13 @@
-package tests.utils;
+package tests;
 
 import dataProviders.SignUpPageDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SignUpPage;
+import tests.BaseUITest;
+import tests.utils.SeleniumUtils;
 
-public class SignUpTestPage extends BaseUITest{
+public class SignUpTestPage extends BaseUITest {
     @Test(dataProvider = "signUpPageDataProvider", dataProviderClass = SignUpPageDataProvider.class)
     public void testIfSignUpPageIsAvailable(String browserType, boolean expectedAvailability){
         driver = SeleniumUtils.getDriver(browserType);

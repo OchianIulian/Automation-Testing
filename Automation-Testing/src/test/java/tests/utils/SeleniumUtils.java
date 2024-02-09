@@ -54,7 +54,7 @@ public class SeleniumUtils  {
                     break;
             }
         } catch (Exception e){
-            System.out.println("The" + browserString + "is not available");
+            System.out.println("The" + browserString + "is not available ");
         }
 
         return driver;
