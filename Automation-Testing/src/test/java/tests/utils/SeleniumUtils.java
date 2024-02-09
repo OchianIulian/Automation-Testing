@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.NoSuchDriverException;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeClass;
 
@@ -29,28 +30,31 @@ public class SeleniumUtils  {
 
     public static WebDriver getDriver(String browserString){
         WebDriver driver = null ;
-
-        switch (Objects.requireNonNull(getBrowsersEnumFromString(browserString))){
-            case CHROME:
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-                break;
-            case IE:
-                WebDriverManager.iedriver().setup();
-                driver = new InternetExplorerDriver();
-                break;
-            case SAFARI:
-                WebDriverManager.safaridriver().setup();
-                driver = new SafariDriver();
-                break;
-            case EDGE:
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
-                break;
-            case FIREFOX:
-                WebDriverManager.firefoxdriver() .setup();
-                driver = new FirefoxDriver();
-                break;
+        try{
+            switch (Objects.requireNonNull(getBrowsersEnumFromString(browserString))){
+                case CHROME:
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    break;
+                case IE:
+                    WebDriverManager.iedriver().setup();
+                    driver = new InternetExplorerDriver();
+                    break;
+                case SAFARI:
+                    WebDriverManager.safaridriver().setup();
+                    driver = new SafariDriver();
+                    break;
+                case EDGE:
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                    break;
+                case FIREFOX:
+                    WebDriverManager.firefoxdriver() .setup();
+                    driver = new FirefoxDriver();
+                    break;
+            }
+        } catch (Exception e){
+            System.out.println("The" + browserString + "is not available");
         }
 
         return driver;

@@ -16,7 +16,7 @@ public class BaseUITest {
     String browser;
     @BeforeClass
     public void setUp() throws IOException {
-        Properties properties = SeleniumUtils.readProperties("src\\test\\resources\\application");
+        Properties properties = SeleniumUtils.readProperties("src/test/resources/application.properties");
         url = properties.getProperty("url");
         path = properties.getProperty("path");
         browser = properties.getProperty("browser");

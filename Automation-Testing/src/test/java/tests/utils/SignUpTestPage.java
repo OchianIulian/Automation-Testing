@@ -1,6 +1,7 @@
 package tests.utils;
 
 import dataProviders.SignUpPageDataProvider;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SignUpPage;
 
@@ -10,5 +11,7 @@ public class SignUpTestPage extends BaseUITest{
         driver = SeleniumUtils.getDriver(browserType);
         SignUpPage signUpPage = new SignUpPage(driver);
         boolean isPageAvailable = signUpPage.open(pageUnderTestUrl);
+
+        Assert.assertEquals(expectedAvailability, isPageAvailable);
     }
 }
