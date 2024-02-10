@@ -3,6 +3,10 @@ package dataProviders;
 import org.testng.annotations.DataProvider;
 
 public class NegativeTestDataProvider {
+    /**
+     * Data provider for check the signing up for new users
+     * @return
+     */
     @DataProvider(name="negativeSignUpDataProvider")
     public Object[][] negativeSignUpDataProvider () {
         return new Object[][]{

@@ -8,6 +8,12 @@ import tests.BaseUITest;
 import tests.utils.SeleniumUtils;
 
 public class SignUpTestPage extends BaseUITest {
+
+    /**
+     * This test tests if a page available on different browsers on your computer.
+     * @param browserType is a String
+     * @param expectedAvailability is a boolean
+     */
     @Test(dataProvider = "signUpPageDataProvider", dataProviderClass = SignUpPageDataProvider.class)
     public void testIfSignUpPageIsAvailable(String browserType, boolean expectedAvailability){
         driver = SeleniumUtils.getDriver(browserType);

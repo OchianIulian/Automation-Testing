@@ -15,11 +15,18 @@ import javax.swing.*;
 public class GoogleSearchTest {
     WebDriver driver;
 
+    /**
+     *Before the test starts, the chrome driver is set up
+     */
     @BeforeClass
     public void setUp(){
         WebDriverManager.chromedriver().setup();
     }
 
+    /**
+     * Opens Chrome browser, accept cookies, search for an input, click on a link and
+     * scrolls down the page
+     */
     @Test
     public void searchOnGoogle(){
         driver = new ChromeDriver();

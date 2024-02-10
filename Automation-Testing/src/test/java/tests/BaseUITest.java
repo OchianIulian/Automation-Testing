@@ -9,12 +9,21 @@ import tests.utils.SeleniumUtils;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * Base class for any testing page class
+ */
 public class BaseUITest {
     public WebDriver driver;
     String url;
     String path;
     String pageUnderTestUrl;
     String browser;
+
+    /**
+     * Set up the website.
+     * Get the info rom application.properties and create the path to the wanted website.
+     * @throws IOException
+     */
     @BeforeClass
     public void setUp() throws IOException {
         Properties properties = SeleniumUtils.readProperties("src/test/resources/application.properties");
@@ -28,6 +37,9 @@ public class BaseUITest {
     }
 
 
+    /**
+     * Close the opened websites after the tests are finished
+     */
     @AfterClass
     public void close(){
         //close the browser

@@ -8,6 +8,27 @@ import tests.BaseUITest;
 import tests.utils.SeleniumUtils;
 
 public class RegisterNewUserTest extends BaseUITest {
+    /**
+     * This test opens a SignUp web page and test creating new users with information from negativeSignUpDataProvider
+     * @param browserType String
+     * @param username String
+     * @param password String
+     * @param confirmPassword String
+     * @param gender String
+     * @param firstName String
+     * @param lastName String
+     * @param email String
+     * @param dateOfBirth String
+     * @param nationality String
+     * @param termsAndConditionSelected String
+     * @param expectedUserNameErr String
+     * @param expectedPasswordErr String
+     * @param expectedConfirmationPasswordErr String
+     * @param expectedFirstNameError String
+     * @param expectedLastNameError String
+     * @param expectedEmailError String
+     * @param expectedTermsAndConditionError String
+     */
     @Test(dataProvider = "negativeSignUpDataProvider", dataProviderClass = NegativeTestDataProvider.class)
     public void testNegativeSignUp(String browserType, String username, String password, String confirmPassword, String gender,
                                    String firstName, String lastName, String email, String dateOfBirth, String nationality,
