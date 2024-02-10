@@ -57,4 +57,5 @@ Opens a SignUp page and fill with different informtion from a data provider and 
 
 ## Contributors
 GitHub: OchianIulian
+
 LinkedIn: https://www.linkedin.com/in/andrei-ochian-067b28196/
