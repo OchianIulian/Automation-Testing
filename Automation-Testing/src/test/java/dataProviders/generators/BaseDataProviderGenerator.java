@@ -3,8 +3,18 @@ package dataProviders.generators;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * BaseDataProviderGenerator is a class that is used for generating DataProviders for different type of data providers
+ * It can be updated easily just by adding other ifs
+ */
 public class BaseDataProviderGenerator {
 
+    /**
+     * Generate data for tests
+     * @param numOfSets - how much tests will be done
+     * @param dataProviderType - describes the type of data will be generated
+     * @return
+     */
     public static Object[][] generateTestData(int numOfSets, DataProviderWithArgumentTypes dataProviderType){
         Random random = new Random();
         List<Object> argumentsList;

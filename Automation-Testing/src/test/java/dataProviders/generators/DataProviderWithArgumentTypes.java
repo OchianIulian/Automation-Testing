@@ -3,6 +3,9 @@ package dataProviders.generators;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This enum class contains different type of data provider's names and their argument types, as ArrayLists
+ */
 public enum DataProviderWithArgumentTypes {
     CALCULATOR_ARGS(initList("int", "int", "operator", "int" )),
     BROWSER_ARGS(initList("browser_type", "bool"));
