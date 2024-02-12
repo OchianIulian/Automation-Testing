@@ -55,6 +55,9 @@ Opens a SignUp page and fill with different informtion from a data provider and 
 2. Test Signup with Invalid Credentials: Tests the signup process with invalid user credentials.
 3. Test Signup with Empty Fields: Tests the signup process with empty fields.
 
+### Data provider generator
+It generates different data providers by their name and number of tests. See code documentation.
+
 ## Contributors
 GitHub: OchianIulian
 
